@@ -1,0 +1,369 @@
+{
+  "contractName": "Constants",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Constants.sol\":\"Constants\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Constants.sol\":{\"keccak256\":\"0x83c612440d3fc43ac19af8cf813a15ad3508b527c6d283f8a3739d1f90d684ef\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://1f777e1cf9eb9df1c189399c78686395b0054c494f5ee55f19c067f25461f4dc\",\"dweb:/ipfs/QmaqzvLquEs8Yzkh7BWD8VfHhRKbv2NZPikhWJoxKPZXfk\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212207c8f95ac82c294a51cedd8cc5a6e2ffa95a4c78fbf0de57ab60c68a5a6f6482564736f6c63430008150033",
+  "deployedBytecode": "0x60806040525f80fdfea26469706673582212207c8f95ac82c294a51cedd8cc5a6e2ffa95a4c78fbf0de57ab60c68a5a6f6482564736f6c63430008150033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "504:24:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "504:24:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.5.16;\r\n\r\n    enum Alert_Status{\r\n        Open, \r\n        Closed\r\n    }\r\n    \r\n    enum Alert_Type{\r\n        Fire_Alert,\r\n        Theft_Alert,\r\n        Health_Emergency_Alert,\r\n        Invalid_Alert\r\n    }\r\n\r\n    struct Alert{\r\n        uint alertId;\r\n        string title;\r\n        string description;\r\n        string recipient_Address;\r\n        Alert_Type type_Of_Alert;\r\n        address responder_Address;\r\n        Alert_Status status;\r\n    }\r\n\r\ncontract Constants{\r\n\r\n}",
+  "sourcePath": "C:\\Users\\varunbailapudi\\Documents\\Spring 2024\\Project Implementation\\AlertManagement\\contracts\\Constants.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Constants.sol",
+    "exportedSymbols": {
+      "Alert": [
+        186
+      ],
+      "Alert_Status": [
+        164
+      ],
+      "Alert_Type": [
+        169
+      ],
+      "Constants": [
+        187
+      ]
+    },
+    "id": 188,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 161,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:25:1"
+      },
+      {
+        "canonicalName": "Alert_Status",
+        "id": 164,
+        "members": [
+          {
+            "id": 162,
+            "name": "Open",
+            "nameLocation": "98:4:1",
+            "nodeType": "EnumValue",
+            "src": "98:4:1"
+          },
+          {
+            "id": 163,
+            "name": "Closed",
+            "nameLocation": "114:6:1",
+            "nodeType": "EnumValue",
+            "src": "114:6:1"
+          }
+        ],
+        "name": "Alert_Status",
+        "nameLocation": "75:12:1",
+        "nodeType": "EnumDefinition",
+        "src": "70:57:1"
+      },
+      {
+        "canonicalName": "Alert_Type",
+        "id": 169,
+        "members": [
+          {
+            "id": 165,
+            "name": "Fire_Alert",
+            "nameLocation": "165:10:1",
+            "nodeType": "EnumValue",
+            "src": "165:10:1"
+          },
+          {
+            "id": 166,
+            "name": "Theft_Alert",
+            "nameLocation": "186:11:1",
+            "nodeType": "EnumValue",
+            "src": "186:11:1"
+          },
+          {
+            "id": 167,
+            "name": "Health_Emergency_Alert",
+            "nameLocation": "208:22:1",
+            "nodeType": "EnumValue",
+            "src": "208:22:1"
+          },
+          {
+            "id": 168,
+            "name": "Invalid_Alert",
+            "nameLocation": "241:13:1",
+            "nodeType": "EnumValue",
+            "src": "241:13:1"
+          }
+        ],
+        "name": "Alert_Type",
+        "nameLocation": "144:10:1",
+        "nodeType": "EnumDefinition",
+        "src": "139:122:1"
+      },
+      {
+        "canonicalName": "Alert",
+        "id": 186,
+        "members": [
+          {
+            "constant": false,
+            "id": 171,
+            "mutability": "mutable",
+            "name": "alertId",
+            "nameLocation": "297:7:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "292:12:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 170,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "292:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 173,
+            "mutability": "mutable",
+            "name": "title",
+            "nameLocation": "322:5:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "315:12:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 172,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "315:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 175,
+            "mutability": "mutable",
+            "name": "description",
+            "nameLocation": "345:11:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "338:18:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 174,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "338:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 177,
+            "mutability": "mutable",
+            "name": "recipient_Address",
+            "nameLocation": "374:17:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "367:24:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 176,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "367:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 180,
+            "mutability": "mutable",
+            "name": "type_Of_Alert",
+            "nameLocation": "413:13:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "402:24:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Alert_Type_$169",
+              "typeString": "enum Alert_Type"
+            },
+            "typeName": {
+              "id": 179,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 178,
+                "name": "Alert_Type",
+                "nameLocations": [
+                  "402:10:1"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 169,
+                "src": "402:10:1"
+              },
+              "referencedDeclaration": 169,
+              "src": "402:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Alert_Type_$169",
+                "typeString": "enum Alert_Type"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 182,
+            "mutability": "mutable",
+            "name": "responder_Address",
+            "nameLocation": "445:17:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "437:25:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 181,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "437:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 185,
+            "mutability": "mutable",
+            "name": "status",
+            "nameLocation": "486:6:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 186,
+            "src": "473:19:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Alert_Status_$164",
+              "typeString": "enum Alert_Status"
+            },
+            "typeName": {
+              "id": 184,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 183,
+                "name": "Alert_Status",
+                "nameLocations": [
+                  "473:12:1"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 164,
+                "src": "473:12:1"
+              },
+              "referencedDeclaration": 164,
+              "src": "473:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Alert_Status_$164",
+                "typeString": "enum Alert_Status"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "Alert",
+        "nameLocation": "276:5:1",
+        "nodeType": "StructDefinition",
+        "scope": 188,
+        "src": "269:231:1",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Constants",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 187,
+        "linearizedBaseContracts": [
+          187
+        ],
+        "name": "Constants",
+        "nameLocation": "513:9:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 188,
+        "src": "504:24:1",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "37:491:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-05T23:28:49.890Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

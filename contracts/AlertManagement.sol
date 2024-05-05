@@ -2,42 +2,26 @@
 // pragma solidity >=0.8.0 <=0.9.0;
 pragma solidity >=0.5.16;
 
+import "./Constants.sol";
+import "./Queue.sol";
+
 contract AlertManagement{
+// To access enqueue of the queue
+    Queue queue;
+    constructor(Queue _queue){
+        queue = _queue;
+    }
 
     // Count of currently open alerts
     uint alert_Count = 0;
 
-    // Array to store alerts
-    Alert[] public alerts;
-
     // Event is raised when a new alert is created
     event AlertCreated(string desc);
 
-    enum Alert_Status{
-        Open, 
-        Closed
-    }
-    
-    enum Alert_Type{
-        Fire_Alert,
-        Theft_Alert,
-        Health_Emergency_Alert
-    }
-
-    struct Alert{
-        uint alertId;
-        string title;
-        string description;
-        string recipient_Address;
-        Alert_Type type_Of_Alert;
-        address responder_Address;
-        Alert_Status status;
-    }
-
-    // function to retrieve all the open alerts
-    function getAlerts() public view returns(Alert[] memory){
-        return alerts;
-    }
+    // // function to retrieve all the open alerts
+    // function getAlerts() public view returns(Alert[] memory){
+    //     return alerts;
+    // }
 
     // Returns the alert type constant using the user entered string
     function get_AlertType_from_string(string memory alertType) private pure returns(Alert_Type){
@@ -45,8 +29,10 @@ contract AlertManagement{
         return Alert_Type.Fire_Alert;
     else if( keccak256(abi.encodePacked((alertType))) == keccak256(abi.encodePacked(("Health"))) )
         return Alert_Type.Health_Emergency_Alert;
-    if( keccak256(abi.encodePacked((alertType))) == keccak256(abi.encodePacked(("Theft"))) )
+    else if( keccak256(abi.encodePacked((alertType))) == keccak256(abi.encodePacked(("Theft"))) )
         return Alert_Type.Theft_Alert;                
+    else 
+        return Alert_Type.Invalid_Alert;
     }
 
 
@@ -61,7 +47,7 @@ contract AlertManagement{
             responder_Address : address(0),
             status : Alert_Status.Open
         });
-        alerts.push(alert);
+        queue.enqueue(alert);
         emit AlertCreated(alert.title);
     }
 
@@ -71,8 +57,8 @@ contract AlertManagement{
     }
 
 
-    // Invoked by responder to close the Alert, marks the alert with the alertId as Closed.
-    function close_Alert_By_Responder(uint alertId) public{
-        alerts[alertId].status = Alert_Status.Closed;
-    }
+    // // Invoked by responder to close the Alert, marks the alert with the alertId as Closed.
+    // function close_Alert_By_Responder(uint alertId) public{
+    //     alerts[alertId].status = Alert_Status.Closed;
+    // }
 }
