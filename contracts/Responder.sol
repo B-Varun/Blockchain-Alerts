@@ -15,7 +15,7 @@ contract Responder{
     }
 
     // Count of closed alerts
-    int alertsResponded = 0;
+    uint alertsResponded = 0;
     
     //  Array to store the Alert ID's of the responder closed alerts
     AlertManagement.Alert[] public respondedAlerts;
@@ -26,7 +26,8 @@ contract Responder{
 
 
 // Function pending, add a way to close the alert. ***********
-    function respond_With_AlertId(int alertId) public{
+    function respond_With_AlertId(uint alertId) public{
+        management.close_Alert_By_Responder(alertId);
         get_Open_Alerts()[alertId] = management.Alert_Status.Closed;
         respondedAlerts.push(get_Open_Alerts()[alertId]);
         alertsResponded++;

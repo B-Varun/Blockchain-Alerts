@@ -5,7 +5,7 @@ pragma solidity >=0.5.16;
 contract AlertManagement{
 
     // Count of currently open alerts
-    int alert_Count = 0;
+    uint alert_Count = 0;
 
     // Array to store alerts
     Alert[] public alerts;
@@ -25,7 +25,7 @@ contract AlertManagement{
     }
 
     struct Alert{
-        int alertId;
+        uint alertId;
         string title;
         string description;
         string recipient_Address;
@@ -70,4 +70,9 @@ contract AlertManagement{
         setAlert(title, description, recipient_Address, get_AlertType_from_string(alertType));
     }
 
+
+    // Invoked by responder to close the Alert, marks the alert with the alertId as Closed.
+    function close_Alert_By_Responder(uint alertId) public{
+        alerts[alertId].status = Alert_Status.Closed;
+    }
 }
