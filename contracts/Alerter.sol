@@ -6,13 +6,13 @@ import "./Constants.sol";
 import "./Queue.sol";
 
 contract Alerter{
-// To access enqueue of the queue
+// To access enqueue of the queue. The constructor might need address to be passed. Verify it.
     Queue queue;
     constructor(Queue _queue){
         queue = _queue;
     }
 
-    // Count of currently open alerts
+    // Count of currently open alerts.
     uint alert_Count = 0;
 
     // Event is raised when a new alert is created

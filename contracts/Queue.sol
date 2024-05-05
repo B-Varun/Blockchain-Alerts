@@ -48,4 +48,12 @@ contract Queue{
     return openAlerts.length;
  } 
 
+ function list_All_OpenAlerts() public view returns(Alert[] memory){
+    return openAlerts;
+ }
+
+ function list_All_Responded_Alerts() public view returns(Alert[] memory){
+    return closedAlerts;
+ }
+
 }
