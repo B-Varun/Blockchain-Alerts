@@ -34,6 +34,10 @@ contract AlertManagement{
         Alert_Status status;
     }
 
+    // function to retrieve all the open alerts
+    function getAlerts() public view returns(Alert[] memory){
+        return alerts;
+    }
 
     // Returns the alert type constant using the user entered string
     function get_AlertType_from_string(string memory alertType) private pure returns(Alert_Type){
