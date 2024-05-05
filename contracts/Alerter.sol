@@ -5,7 +5,7 @@ pragma solidity >=0.5.16;
 import "./Constants.sol";
 import "./Queue.sol";
 
-contract AlertManagement{
+contract Alerter{
 // To access enqueue of the queue
     Queue queue;
     constructor(Queue _queue){
