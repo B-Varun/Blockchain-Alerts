@@ -55,10 +55,4 @@ contract Alerter{
     function createAlert(string memory title, string memory description, string memory recipient_Address, string memory alertType) public {
         setAlert(title, description, recipient_Address, get_AlertType_from_string(alertType));
     }
-
-
-    // // Invoked by responder to close the Alert, marks the alert with the alertId as Closed.
-    // function close_Alert_By_Responder(uint alertId) public{
-    //     alerts[alertId].status = Alert_Status.Closed;
-    // }
 }

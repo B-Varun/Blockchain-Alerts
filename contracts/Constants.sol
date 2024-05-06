@@ -23,6 +23,4 @@ pragma solidity >=0.5.16;
         Alert_Status status;
     }
 
-contract Constants{
-
-}
+contract Constants{}

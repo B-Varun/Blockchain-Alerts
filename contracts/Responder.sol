@@ -30,6 +30,4 @@ contract Responder{
     function respond_To_Alert() public{
         queue.dequeue();
     }
-
-
 }

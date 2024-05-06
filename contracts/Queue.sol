@@ -55,5 +55,4 @@ contract Queue{
  function list_All_Responded_Alerts() public view returns(Alert[] memory){
     return closedAlerts;
  }
-
 }
