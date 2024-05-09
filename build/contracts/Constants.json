@@ -1,38 +1,25 @@
 {
   "contractName": "Constants",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Constants.sol\":\"Constants\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Constants.sol\":{\"keccak256\":\"0x83c612440d3fc43ac19af8cf813a15ad3508b527c6d283f8a3739d1f90d684ef\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://1f777e1cf9eb9df1c189399c78686395b0054c494f5ee55f19c067f25461f4dc\",\"dweb:/ipfs/QmaqzvLquEs8Yzkh7BWD8VfHhRKbv2NZPikhWJoxKPZXfk\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212207c8f95ac82c294a51cedd8cc5a6e2ffa95a4c78fbf0de57ab60c68a5a6f6482564736f6c63430008150033",
-  "deployedBytecode": "0x60806040525f80fdfea26469706673582212207c8f95ac82c294a51cedd8cc5a6e2ffa95a4c78fbf0de57ab60c68a5a6f6482564736f6c63430008150033",
-  "immutableReferences": {},
-  "generatedSources": [],
-  "deployedGeneratedSources": [],
-  "sourceMap": "504:24:1:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "504:24:1:-:0;;;;;",
-  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.5.16;\r\n\r\n    enum Alert_Status{\r\n        Open, \r\n        Closed\r\n    }\r\n    \r\n    enum Alert_Type{\r\n        Fire_Alert,\r\n        Theft_Alert,\r\n        Health_Emergency_Alert,\r\n        Invalid_Alert\r\n    }\r\n\r\n    struct Alert{\r\n        uint alertId;\r\n        string title;\r\n        string description;\r\n        string recipient_Address;\r\n        Alert_Type type_Of_Alert;\r\n        address responder_Address;\r\n        Alert_Status status;\r\n    }\r\n\r\ncontract Constants{\r\n\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Constants.sol\":\"Constants\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Constants.sol\":{\"keccak256\":\"0x1bc1aef59ee1abef03a591568b16557e843d539376c0a8ca1f7bfe095498ea4c\",\"urls\":[\"bzz-raw://e64ff59707e650a711c44d6f0fdd58afec86d0a85db30a50c66543350a9e6cc8\",\"dweb:/ipfs/QmP3Mms1XcGaVAnnr8TXi9TrNK1N3jSKHBNpmvB4fK5T5z\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604c80601d6000396000f3fe6080604052600080fdfea365627a7a723158203472bd2362e80f73f0092267e234133a7b809b489b3f26dd029de286bbc9f88f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x6080604052600080fdfea365627a7a723158203472bd2362e80f73f0092267e234133a7b809b489b3f26dd029de286bbc9f88f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "103:458:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;103:458:1;;;;;;;",
+  "deployedSourceMap": "103:458:1:-;;;;;",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.5.16;\r\npragma experimental ABIEncoderV2;\r\n\r\n\r\ncontract Constants{\r\n    enum Alert_Status{\r\n        Open, \r\n        Closed\r\n    }\r\n    \r\n    enum Alert_Type{\r\n        Fire_Alert,\r\n        Theft_Alert,\r\n        Health_Emergency_Alert,\r\n        Invalid_Alert\r\n    }\r\n\r\n    struct Alert{\r\n        uint alertId;\r\n        string title;\r\n        string description;\r\n        string recipient_Address;\r\n        Alert_Type type_Of_Alert;\r\n        address responder_Address;\r\n        Alert_Status status;\r\n    }\r\n}\r\n",
   "sourcePath": "C:\\Users\\varunbailapudi\\Documents\\Spring 2024\\Project Implementation\\AlertManagement\\contracts\\Constants.sol",
   "ast": {
     "absolutePath": "project:/contracts/Constants.sol",
     "exportedSymbols": {
-      "Alert": [
-        186
-      ],
-      "Alert_Status": [
-        164
-      ],
-      "Alert_Type": [
-        169
-      ],
       "Constants": [
-        187
+        189
       ]
     },
-    "id": 188,
-    "license": "GPL-3.0",
+    "id": 190,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 161,
+        "id": 164,
         "literals": [
           "solidity",
           ">=",
@@ -43,327 +30,629 @@
         "src": "37:25:1"
       },
       {
-        "canonicalName": "Alert_Status",
-        "id": 164,
-        "members": [
-          {
-            "id": 162,
-            "name": "Open",
-            "nameLocation": "98:4:1",
-            "nodeType": "EnumValue",
-            "src": "98:4:1"
-          },
-          {
-            "id": 163,
-            "name": "Closed",
-            "nameLocation": "114:6:1",
-            "nodeType": "EnumValue",
-            "src": "114:6:1"
-          }
+        "id": 165,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
         ],
-        "name": "Alert_Status",
-        "nameLocation": "75:12:1",
-        "nodeType": "EnumDefinition",
-        "src": "70:57:1"
+        "nodeType": "PragmaDirective",
+        "src": "64:33:1"
       },
       {
-        "canonicalName": "Alert_Type",
-        "id": 169,
-        "members": [
-          {
-            "id": 165,
-            "name": "Fire_Alert",
-            "nameLocation": "165:10:1",
-            "nodeType": "EnumValue",
-            "src": "165:10:1"
-          },
-          {
-            "id": 166,
-            "name": "Theft_Alert",
-            "nameLocation": "186:11:1",
-            "nodeType": "EnumValue",
-            "src": "186:11:1"
-          },
-          {
-            "id": 167,
-            "name": "Health_Emergency_Alert",
-            "nameLocation": "208:22:1",
-            "nodeType": "EnumValue",
-            "src": "208:22:1"
-          },
-          {
-            "id": 168,
-            "name": "Invalid_Alert",
-            "nameLocation": "241:13:1",
-            "nodeType": "EnumValue",
-            "src": "241:13:1"
-          }
-        ],
-        "name": "Alert_Type",
-        "nameLocation": "144:10:1",
-        "nodeType": "EnumDefinition",
-        "src": "139:122:1"
-      },
-      {
-        "canonicalName": "Alert",
-        "id": 186,
-        "members": [
-          {
-            "constant": false,
-            "id": 171,
-            "mutability": "mutable",
-            "name": "alertId",
-            "nameLocation": "297:7:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "292:12:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_uint256",
-              "typeString": "uint256"
-            },
-            "typeName": {
-              "id": 170,
-              "name": "uint",
-              "nodeType": "ElementaryTypeName",
-              "src": "292:4:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_uint256",
-                "typeString": "uint256"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 173,
-            "mutability": "mutable",
-            "name": "title",
-            "nameLocation": "322:5:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "315:12:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_string_storage_ptr",
-              "typeString": "string"
-            },
-            "typeName": {
-              "id": 172,
-              "name": "string",
-              "nodeType": "ElementaryTypeName",
-              "src": "315:6:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 175,
-            "mutability": "mutable",
-            "name": "description",
-            "nameLocation": "345:11:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "338:18:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_string_storage_ptr",
-              "typeString": "string"
-            },
-            "typeName": {
-              "id": 174,
-              "name": "string",
-              "nodeType": "ElementaryTypeName",
-              "src": "338:6:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 177,
-            "mutability": "mutable",
-            "name": "recipient_Address",
-            "nameLocation": "374:17:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "367:24:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_string_storage_ptr",
-              "typeString": "string"
-            },
-            "typeName": {
-              "id": 176,
-              "name": "string",
-              "nodeType": "ElementaryTypeName",
-              "src": "367:6:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 180,
-            "mutability": "mutable",
-            "name": "type_Of_Alert",
-            "nameLocation": "413:13:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "402:24:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Alert_Type_$169",
-              "typeString": "enum Alert_Type"
-            },
-            "typeName": {
-              "id": 179,
-              "nodeType": "UserDefinedTypeName",
-              "pathNode": {
-                "id": 178,
-                "name": "Alert_Type",
-                "nameLocations": [
-                  "402:10:1"
-                ],
-                "nodeType": "IdentifierPath",
-                "referencedDeclaration": 169,
-                "src": "402:10:1"
-              },
-              "referencedDeclaration": 169,
-              "src": "402:10:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Alert_Type_$169",
-                "typeString": "enum Alert_Type"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 182,
-            "mutability": "mutable",
-            "name": "responder_Address",
-            "nameLocation": "445:17:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "437:25:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
-            },
-            "typeName": {
-              "id": 181,
-              "name": "address",
-              "nodeType": "ElementaryTypeName",
-              "src": "437:7:1",
-              "stateMutability": "nonpayable",
-              "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
-              }
-            },
-            "visibility": "internal"
-          },
-          {
-            "constant": false,
-            "id": 185,
-            "mutability": "mutable",
-            "name": "status",
-            "nameLocation": "486:6:1",
-            "nodeType": "VariableDeclaration",
-            "scope": 186,
-            "src": "473:19:1",
-            "stateVariable": false,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Alert_Status_$164",
-              "typeString": "enum Alert_Status"
-            },
-            "typeName": {
-              "id": 184,
-              "nodeType": "UserDefinedTypeName",
-              "pathNode": {
-                "id": 183,
-                "name": "Alert_Status",
-                "nameLocations": [
-                  "473:12:1"
-                ],
-                "nodeType": "IdentifierPath",
-                "referencedDeclaration": 164,
-                "src": "473:12:1"
-              },
-              "referencedDeclaration": 164,
-              "src": "473:12:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Alert_Status_$164",
-                "typeString": "enum Alert_Status"
-              }
-            },
-            "visibility": "internal"
-          }
-        ],
-        "name": "Alert",
-        "nameLocation": "276:5:1",
-        "nodeType": "StructDefinition",
-        "scope": 188,
-        "src": "269:231:1",
-        "visibility": "public"
-      },
-      {
-        "abstract": false,
         "baseContracts": [],
-        "canonicalName": "Constants",
         "contractDependencies": [],
         "contractKind": "contract",
+        "documentation": null,
         "fullyImplemented": true,
-        "id": 187,
+        "id": 189,
         "linearizedBaseContracts": [
-          187
+          189
         ],
         "name": "Constants",
-        "nameLocation": "513:9:1",
         "nodeType": "ContractDefinition",
-        "nodes": [],
-        "scope": 188,
-        "src": "504:24:1",
-        "usedErrors": [],
-        "usedEvents": []
+        "nodes": [
+          {
+            "canonicalName": "Constants.Alert_Status",
+            "id": 168,
+            "members": [
+              {
+                "id": 166,
+                "name": "Open",
+                "nodeType": "EnumValue",
+                "src": "156:4:1"
+              },
+              {
+                "id": 167,
+                "name": "Closed",
+                "nodeType": "EnumValue",
+                "src": "172:6:1"
+              }
+            ],
+            "name": "Alert_Status",
+            "nodeType": "EnumDefinition",
+            "src": "128:57:1"
+          },
+          {
+            "canonicalName": "Constants.Alert_Type",
+            "id": 173,
+            "members": [
+              {
+                "id": 169,
+                "name": "Fire_Alert",
+                "nodeType": "EnumValue",
+                "src": "223:10:1"
+              },
+              {
+                "id": 170,
+                "name": "Theft_Alert",
+                "nodeType": "EnumValue",
+                "src": "244:11:1"
+              },
+              {
+                "id": 171,
+                "name": "Health_Emergency_Alert",
+                "nodeType": "EnumValue",
+                "src": "266:22:1"
+              },
+              {
+                "id": 172,
+                "name": "Invalid_Alert",
+                "nodeType": "EnumValue",
+                "src": "299:13:1"
+              }
+            ],
+            "name": "Alert_Type",
+            "nodeType": "EnumDefinition",
+            "src": "197:122:1"
+          },
+          {
+            "canonicalName": "Constants.Alert",
+            "id": 188,
+            "members": [
+              {
+                "constant": false,
+                "id": 175,
+                "name": "alertId",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "350:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 174,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "350:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 177,
+                "name": "title",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "373:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 176,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "373:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 179,
+                "name": "description",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "396:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 178,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 181,
+                "name": "recipient_Address",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "425:24:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 180,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "425:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 183,
+                "name": "type_Of_Alert",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "460:24:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Alert_Type_$173",
+                  "typeString": "enum Constants.Alert_Type"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 182,
+                  "name": "Alert_Type",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 173,
+                  "src": "460:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Alert_Type_$173",
+                    "typeString": "enum Constants.Alert_Type"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 185,
+                "name": "responder_Address",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "495:25:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 184,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "495:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 187,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 188,
+                "src": "531:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Alert_Status_$168",
+                  "typeString": "enum Constants.Alert_Status"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 186,
+                  "name": "Alert_Status",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 168,
+                  "src": "531:12:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Alert_Status_$168",
+                    "typeString": "enum Constants.Alert_Status"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Alert",
+            "nodeType": "StructDefinition",
+            "scope": 189,
+            "src": "327:231:1",
+            "visibility": "public"
+          }
+        ],
+        "scope": 190,
+        "src": "103:458:1"
       }
     ],
-    "src": "37:491:1"
+    "src": "37:526:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Constants.sol",
+      "exportedSymbols": {
+        "Constants": [
+          189
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 164,
+        "name": "PragmaDirective",
+        "src": "37:25:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 165,
+        "name": "PragmaDirective",
+        "src": "64:33:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            189
+          ],
+          "name": "Constants",
+          "scope": 190
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Constants.Alert_Status",
+              "name": "Alert_Status"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Open"
+                },
+                "id": 166,
+                "name": "EnumValue",
+                "src": "156:4:1"
+              },
+              {
+                "attributes": {
+                  "name": "Closed"
+                },
+                "id": 167,
+                "name": "EnumValue",
+                "src": "172:6:1"
+              }
+            ],
+            "id": 168,
+            "name": "EnumDefinition",
+            "src": "128:57:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Constants.Alert_Type",
+              "name": "Alert_Type"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Fire_Alert"
+                },
+                "id": 169,
+                "name": "EnumValue",
+                "src": "223:10:1"
+              },
+              {
+                "attributes": {
+                  "name": "Theft_Alert"
+                },
+                "id": 170,
+                "name": "EnumValue",
+                "src": "244:11:1"
+              },
+              {
+                "attributes": {
+                  "name": "Health_Emergency_Alert"
+                },
+                "id": 171,
+                "name": "EnumValue",
+                "src": "266:22:1"
+              },
+              {
+                "attributes": {
+                  "name": "Invalid_Alert"
+                },
+                "id": 172,
+                "name": "EnumValue",
+                "src": "299:13:1"
+              }
+            ],
+            "id": 173,
+            "name": "EnumDefinition",
+            "src": "197:122:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Constants.Alert",
+              "name": "Alert",
+              "scope": 189,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "alertId",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 174,
+                    "name": "ElementaryTypeName",
+                    "src": "350:4:1"
+                  }
+                ],
+                "id": 175,
+                "name": "VariableDeclaration",
+                "src": "350:12:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "title",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 176,
+                    "name": "ElementaryTypeName",
+                    "src": "373:6:1"
+                  }
+                ],
+                "id": 177,
+                "name": "VariableDeclaration",
+                "src": "373:12:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "description",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 178,
+                    "name": "ElementaryTypeName",
+                    "src": "396:6:1"
+                  }
+                ],
+                "id": 179,
+                "name": "VariableDeclaration",
+                "src": "396:18:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "recipient_Address",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 180,
+                    "name": "ElementaryTypeName",
+                    "src": "425:6:1"
+                  }
+                ],
+                "id": 181,
+                "name": "VariableDeclaration",
+                "src": "425:24:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "type_Of_Alert",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum Constants.Alert_Type",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Alert_Type",
+                      "referencedDeclaration": 173,
+                      "type": "enum Constants.Alert_Type"
+                    },
+                    "id": 182,
+                    "name": "UserDefinedTypeName",
+                    "src": "460:10:1"
+                  }
+                ],
+                "id": 183,
+                "name": "VariableDeclaration",
+                "src": "460:24:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "responder_Address",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 184,
+                    "name": "ElementaryTypeName",
+                    "src": "495:7:1"
+                  }
+                ],
+                "id": 185,
+                "name": "VariableDeclaration",
+                "src": "495:25:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "status",
+                  "scope": 188,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum Constants.Alert_Status",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Alert_Status",
+                      "referencedDeclaration": 168,
+                      "type": "enum Constants.Alert_Status"
+                    },
+                    "id": 186,
+                    "name": "UserDefinedTypeName",
+                    "src": "531:12:1"
+                  }
+                ],
+                "id": 187,
+                "name": "VariableDeclaration",
+                "src": "531:19:1"
+              }
+            ],
+            "id": 188,
+            "name": "StructDefinition",
+            "src": "327:231:1"
+          }
+        ],
+        "id": 189,
+        "name": "ContractDefinition",
+        "src": "103:458:1"
+      }
+    ],
+    "id": 190,
+    "name": "SourceUnit",
+    "src": "37:526:1"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-05-05T23:54:19.028Z",
+  "updatedAt": "2024-05-09T16:41:01.146Z",
   "devdoc": {
-    "kind": "dev",
-    "methods": {},
-    "version": 1
+    "methods": {}
   },
   "userdoc": {
-    "kind": "user",
-    "methods": {},
-    "version": 1
+    "methods": {}
   }
 }

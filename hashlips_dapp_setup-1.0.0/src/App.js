@@ -25,7 +25,7 @@ function App() {
           console.log(responderContractInstance);
           // Code to respond to events
           console.log("\n\nGot an event\n\n");
-          responderContractInstance.handleAlert();
+          responderContractInstance.respond_To_Alert();
         } else {
           console.log("Responder instance not available");
         }
@@ -40,6 +40,7 @@ function App() {
   const connect = async () => {
     // const myBlockchain_URL = "http://127.0.0.1:7545";
     const myBlockchain_URL = "http://127.0.0.1:7545";
+    // const myBlockchain_URL = "https://testnet.aurora.dev";
 
     if (typeof window.ethereum !== "undefined") {
       const accounts = await window.ethereum.request({
@@ -52,9 +53,9 @@ function App() {
       setAccount(accounts[0]);
 
       const alerterContractAddress =
-        "0xd7C6f9bc69BF9162C5A137D28eEd15071Eea8082";
+        "0xe6770dAd46Ce8526f734e1E90c77412e93F81195";
       const responderContractAddress =
-        "0x7294d76791BCDE5C73F7849a38Fe71af8221d73D";
+        "0x65028EDFBbDa204FA01ac1293dF1dFf03bD2937";
       const alerterContract = new ethers.Contract(
         alerterContractAddress,
         contractABI,
@@ -85,11 +86,15 @@ function App() {
         // console.log(alertId);
 
         const title = "1st Alert";
+        const description = "Fire in the hole";
+        const victim_Address = "1234 abc dr";
 
         console.log("Creating an alert obj");
 
         const transactionInstance = await alerterContractInstance.createAlert(
           title,
+          description, 
+          victim_Address,
           "Fire"
         );
         console.log("Before Transaction");

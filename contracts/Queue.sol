@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.5.16;
+pragma experimental ABIEncoderV2;
+
 
 import "./Constants.sol";
 
@@ -9,14 +11,14 @@ import "./Constants.sol";
 contract Queue{
 
 // Keeps track of all the alerts that are currently open
- Alert[] openAlerts;
+ Constants.Alert[] openAlerts;
 
 //  Tracks the list of alerts that are responded and closed by the responder
- Alert[] closedAlerts;
+ Constants.Alert[] closedAlerts;
 
 // Enqueue is only invoked by the Alerter to register a new alert.
 // Adds the new alert to the end of the array that contains open alerts.
- function enqueue(Alert memory alert) public returns(uint){
+ function enqueue(Constants.Alert memory alert) public returns(uint){
     openAlerts.push(alert);
     return openAlerts.length;
  }
@@ -27,7 +29,7 @@ contract Queue{
     // Check if there are any open alerts or not.
     require(openAlerts.length>0);
     // Holding the 1st alert to put into closed state.
-    Alert memory alert = openAlerts[0];
+    Constants.Alert memory alert = openAlerts[0];
 
     /* 
      Replacing the 1st alert from open alerts array. This maintains the FIFO order
@@ -41,18 +43,21 @@ contract Queue{
     openAlerts.pop();
 
     // Mark the alert as closed and add it to the closedAlerts array
-    alert.status = Alert_Status.Closed;
+    alert.status = Constants.Alert_Status.Closed;
     closedAlerts.push(alert);
     
     // Return the number of Open Alerts
-    return openAlerts.length;
+   //  return openAlerts.length;
+
+// Instead of returning the length of the alerts array just send the alert id of the alert that is deleted. 
+   return ((alert.alertId>0) ? alert.alertId : 0);
  } 
 
- function list_All_OpenAlerts() public view returns(Alert[] memory){
+ function list_All_OpenAlerts() public view returns(Constants.Alert[] memory){
     return openAlerts;
  }
 
- function list_All_Responded_Alerts() public view returns(Alert[] memory){
+ function list_All_Responded_Alerts() public view returns(Constants.Alert[] memory){
     return closedAlerts;
  }
 }

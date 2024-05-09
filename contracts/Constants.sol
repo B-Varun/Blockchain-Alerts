@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.5.16;
+pragma experimental ABIEncoderV2;
 
+
+contract Constants{
     enum Alert_Status{
         Open, 
         Closed
@@ -21,6 +24,6 @@ pragma solidity >=0.5.16;
         Alert_Type type_Of_Alert;
         address responder_Address;
         Alert_Status status;
+        
     }
-
-contract Constants{}
+}

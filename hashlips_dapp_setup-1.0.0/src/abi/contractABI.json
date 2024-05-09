@@ -1,5 +1,17 @@
 [
   {
+    "inputs": [
+      {
+        "internalType": "contract Queue",
+        "name": "_queue",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -13,74 +25,21 @@
     "type": "event"
   },
   {
-    "constant": true,
+    "constant": false,
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "alerts",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "alertID",
-        "type": "uint256"
-      },
       {
         "internalType": "string",
         "name": "title",
         "type": "string"
       },
       {
-        "internalType": "enum AlertManagement.Alert_Type",
-        "name": "type_Of_Alert",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getAlerts",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "alertID",
-            "type": "uint256"
-          },
-          {
-            "internalType": "string",
-            "name": "title",
-            "type": "string"
-          },
-          {
-            "internalType": "enum AlertManagement.Alert_Type",
-            "name": "type_Of_Alert",
-            "type": "uint8"
-          }
-        ],
-        "internalType": "struct AlertManagement.Alert[]",
-        "name": "",
-        "type": "tuple[]"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
       {
         "internalType": "string",
-        "name": "title",
+        "name": "recipient_Address",
         "type": "string"
       },
       {
@@ -98,7 +57,7 @@
   {
     "inputs": [
       {
-        "internalType": "address",
+        "internalType": "contract Queue",
         "name": "_address",
         "type": "address"
       }
@@ -110,33 +69,49 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "management",
+    "name": "get_Open_Alerts",
     "outputs": [
       {
-        "internalType": "contract AlertManagement",
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "alertId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "recipient_Address",
+            "type": "string"
+          },
+          {
+            "internalType": "enum Constants.Alert_Type",
+            "name": "type_Of_Alert",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "responder_Address",
+            "type": "address"
+          },
+          {
+            "internalType": "enum Constants.Alert_Status",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Constants.Alert[]",
         "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "respondedAlerts",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
+        "type": "tuple[]"
       }
     ],
     "payable": false,
@@ -146,12 +121,49 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "get_Count_Of_Pending_Alerts",
+    "name": "get_Closed_Alerts",
     "outputs": [
       {
-        "internalType": "uint256",
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "alertId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "recipient_Address",
+            "type": "string"
+          },
+          {
+            "internalType": "enum Constants.Alert_Type",
+            "name": "type_Of_Alert",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "responder_Address",
+            "type": "address"
+          },
+          {
+            "internalType": "enum Constants.Alert_Status",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Constants.Alert[]",
         "name": "",
-        "type": "uint256"
+        "type": "tuple[]"
       }
     ],
     "payable": false,
@@ -161,40 +173,7 @@
   {
     "constant": false,
     "inputs": [],
-    "name": "increment_Pending_Response",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [],
-    "name": "increment_Alerts_Responded",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "get_No_Of_AlertsHandeled",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [],
-    "name": "handleAlert",
+    "name": "respond_To_Alert",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
