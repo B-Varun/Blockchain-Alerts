@@ -30,8 +30,9 @@ contract Alerter{
 
 
     // Increments the count of the initial responses from CFR
-    function cfrInitialResponse() public{
+    function cfrInitialResponse() public returns(uint){
         cfrResponded_Alerts_Count++;
+        return cfrResponded_Alerts_Count;
     }
 
     // Returns the alert type constant using the user entered string

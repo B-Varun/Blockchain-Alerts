@@ -35,9 +35,13 @@ import org.web3j.tx.gas.ContractGasProvider;
 public class Responder extends Contract {
     public static final String BINARY = "Bin file was not provided";
 
-    public static final String FUNC_GET_OPEN_ALERTS = "get_Open_Alerts";
+    public static final String FUNC_ADDCFR = "addCFR";
+
+    public static final String FUNC_CFRADDRESSES = "cfrAddresses";
 
     public static final String FUNC_GET_CLOSED_ALERTS = "get_Closed_Alerts";
+
+    public static final String FUNC_GET_OPEN_ALERTS = "get_Open_Alerts";
 
     public static final String FUNC_RESPOND_TO_ALERT = "respond_To_Alert";
 
@@ -59,8 +63,23 @@ public class Responder extends Contract {
         super(BINARY, contractAddress, web3j, transactionManager, contractGasProvider);
     }
 
-    public RemoteFunctionCall<List> get_Open_Alerts() {
-        final Function function = new Function(FUNC_GET_OPEN_ALERTS, 
+    public RemoteFunctionCall<TransactionReceipt> addCFR(String cfrAddress) {
+        final Function function = new Function(
+                FUNC_ADDCFR, 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, cfrAddress)), 
+                Collections.<TypeReference<?>>emptyList());
+        return executeRemoteCallTransaction(function);
+    }
+
+    public RemoteFunctionCall<String> cfrAddresses(BigInteger param0) {
+        final Function function = new Function(FUNC_CFRADDRESSES, 
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(param0)), 
+                Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
+        return executeRemoteCallSingleValueReturn(function, String.class);
+    }
+
+    public RemoteFunctionCall<List> get_Closed_Alerts() {
+        final Function function = new Function(FUNC_GET_CLOSED_ALERTS, 
                 Arrays.<Type>asList(), 
                 Arrays.<TypeReference<?>>asList(new TypeReference<DynamicArray<Alert>>() {}));
         return new RemoteFunctionCall<List>(function,
@@ -74,8 +93,8 @@ public class Responder extends Contract {
                 });
     }
 
-    public RemoteFunctionCall<List> get_Closed_Alerts() {
-        final Function function = new Function(FUNC_GET_CLOSED_ALERTS, 
+    public RemoteFunctionCall<List> get_Open_Alerts() {
+        final Function function = new Function(FUNC_GET_OPEN_ALERTS, 
                 Arrays.<Type>asList(), 
                 Arrays.<TypeReference<?>>asList(new TypeReference<DynamicArray<Alert>>() {}));
         return new RemoteFunctionCall<List>(function,

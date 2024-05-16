@@ -1,0 +1,737 @@
+{
+  "contractName": "CFR",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract Alerter",
+          "name": "alerterAddr",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "provideInitialResponse",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Alerter\",\"name\":\"alerterAddr\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[],\"name\":\"provideInitialResponse\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CFR.sol\":\"CFR\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Alerter.sol\":{\"keccak256\":\"0xa0de484d3bbe6bea468470c994c51780585590db812fe967f23b95872578f1fb\",\"urls\":[\"bzz-raw://0121861419803197c6fc73672eb04027a0dfb066f187c93e55abbbd2f5252f35\",\"dweb:/ipfs/Qmccf88mt8S36tMWAi7w9BsrsaBHG1YbF9FDS6LpvB9WFA\"]},\"project:/contracts/CFR.sol\":{\"keccak256\":\"0xeff1f29f016a751f58f2881caebc1534e6c750886a8a6b24ff7da8427bc11d47\",\"urls\":[\"bzz-raw://0496899942b4958a70b174a8963164fd2d157e9ff6e6f8b7e131eb3aa81d5412\",\"dweb:/ipfs/QmV5d5GbyhtrdRYjNfD5UVXwFsXaV7Sh6jxaf4iqWBkQCt\"]},\"project:/contracts/Constants.sol\":{\"keccak256\":\"0xd693afee8451e29e6ef3d5a878520349c73a8d568cab2851ce3953aae170a4eb\",\"urls\":[\"bzz-raw://c843cbb9193e246834f0d1dc4ced5ba36fb6f53dca11edb94e571091efbbf800\",\"dweb:/ipfs/Qmf4QkPhfa1BtsQhPes1G2aKr2jM5z99dwVrhCxNwFrYAX\"]},\"project:/contracts/Queue.sol\":{\"keccak256\":\"0x17a9f322379e7f7a23ebb0e9c13f83c0d41afe2e684f547eaf8526a5c4c6a2d5\",\"urls\":[\"bzz-raw://e4abfa19f079d2bfbe949e53460a2967ecfe0a40ba8c2a13429ae765513aeedd\",\"dweb:/ipfs/QmRHhkqMeq7bTnA9C7ZoC6YCzir7ARt2KHGDwVhVviscTK\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102e23803806102e28339818101604052610032919081019061008d565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610111565b600081519050610087816100fa565b92915050565b60006020828403121561009f57600080fd5b60006100ad84828501610078565b91505092915050565b60006100c1826100da565b9050919050565b60006100d3826100b6565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b610103816100c8565b811461010e57600080fd5b50565b6101c2806101206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063ba88b02914610030575b600080fd5b61003861004e565b6040516100459190610143565b60405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663156c33ed6040518163ffffffff1660e01b8152600401602060405180830381600087803b1580156100b957600080fd5b505af11580156100cd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506100f1919081019061010b565b905090565b60008151905061010581610168565b92915050565b60006020828403121561011d57600080fd5b600061012b848285016100f6565b91505092915050565b61013d8161015e565b82525050565b60006020820190506101586000830184610134565b92915050565b6000819050919050565b6101718161015e565b811461017c57600080fd5b5056fea365627a7a72315820fb447a293a289b06d4b92b6b823af7be8ac06972d5e8539e85f6164bdaec0a796c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063ba88b02914610030575b600080fd5b61003861004e565b6040516100459190610143565b60405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663156c33ed6040518163ffffffff1660e01b8152600401602060405180830381600087803b1580156100b957600080fd5b505af11580156100cd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506100f1919081019061010b565b905090565b60008151905061010581610168565b92915050565b60006020828403121561011d57600080fd5b600061012b848285016100f6565b91505092915050565b61013d8161015e565b82525050565b60006020820190506101586000830184610134565b92915050565b6000819050919050565b6101718161015e565b811461017c57600080fd5b5056fea365627a7a72315820fb447a293a289b06d4b92b6b823af7be8ac06972d5e8539e85f6164bdaec0a796c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "128:243:1:-;;;173:79;8:9:-1;5:2;;;30:1;27;20:12;5:2;173:79:1;;;;;;;;;;;;;;;;;;;;;;;;233:11;223:7;;:21;;;;;;;;;;;;;;;;;;173:79;128:243;;5:164:-1;;104:6;98:13;89:22;;116:48;158:5;116:48;;;83:86;;;;;176:293;;306:2;294:9;285:7;281:23;277:32;274:2;;;322:1;319;312:12;274:2;357:1;374:79;445:7;436:6;425:9;421:22;374:79;;;364:89;;336:123;268:201;;;;;476:91;;538:24;556:5;538:24;;;527:35;;521:46;;;;574:106;;651:24;669:5;651:24;;;640:35;;634:46;;;;687:121;;760:42;753:5;749:54;738:65;;732:76;;;;815:147;899:39;932:5;899:39;;;892:5;889:50;879:2;;953:1;950;943:12;879:2;873:89;;128:243:1;;;;;;;",
+  "deployedSourceMap": "128:243:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;128:243:1;;;;;;;;;;;;;;;;;;;260:108;;;:::i;:::-;;;;;;;;;;;;;;;;;309:4;332:7;;;;;;;;;;;:26;;;:28;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;332:28:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;332:28:1;;;;;;;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;332:28:1;;;;;;;;;325:35;;260:108;:::o;5:134:-1:-;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;146:263;;261:2;249:9;240:7;236:23;232:32;229:2;;;277:1;274;267:12;229:2;312:1;329:64;385:7;376:6;365:9;361:22;329:64;;;319:74;;291:108;223:186;;;;;416:113;499:24;517:5;499:24;;;494:3;487:37;481:48;;;536:213;;654:2;643:9;639:18;631:26;;668:71;736:1;725:9;721:17;712:6;668:71;;;625:124;;;;;756:72;;818:5;807:16;;801:27;;;;835:117;904:24;922:5;904:24;;;897:5;894:35;884:2;;943:1;940;933:12;884:2;878:74;",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity >=0.5.16;\r\npragma experimental ABIEncoderV2;\r\n\r\nimport \"./Alerter.sol\";\r\n\r\ncontract CFR{\r\n\r\n    Alerter alerter;\r\n\r\n    constructor(Alerter alerterAddr) public{\r\n        alerter = alerterAddr;\r\n    }\r\n\r\n    function provideInitialResponse() public returns(uint){\r\n        return alerter.cfrInitialResponse();\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\varunbailapudi\\Documents\\Spring 2024\\Project Implementation\\AlertManagement\\contracts\\CFR.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/CFR.sol",
+    "exportedSymbols": {
+      "CFR": [
+        203
+      ]
+    },
+    "id": 204,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 178,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:25:1"
+      },
+      {
+        "id": 179,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "64:33:1"
+      },
+      {
+        "absolutePath": "project:/contracts/Alerter.sol",
+        "file": "./Alerter.sol",
+        "id": 180,
+        "nodeType": "ImportDirective",
+        "scope": 204,
+        "sourceUnit": 177,
+        "src": "101:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 203,
+        "linearizedBaseContracts": [
+          203
+        ],
+        "name": "CFR",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 182,
+            "name": "alerter",
+            "nodeType": "VariableDeclaration",
+            "scope": 203,
+            "src": "149:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Alerter_$176",
+              "typeString": "contract Alerter"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 181,
+              "name": "Alerter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 176,
+              "src": "149:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Alerter_$176",
+                "typeString": "contract Alerter"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 191,
+              "nodeType": "Block",
+              "src": "212:40:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 187,
+                      "name": "alerter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 182,
+                      "src": "223:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Alerter_$176",
+                        "typeString": "contract Alerter"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 188,
+                      "name": "alerterAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 184,
+                      "src": "233:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Alerter_$176",
+                        "typeString": "contract Alerter"
+                      }
+                    },
+                    "src": "223:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Alerter_$176",
+                      "typeString": "contract Alerter"
+                    }
+                  },
+                  "id": 190,
+                  "nodeType": "ExpressionStatement",
+                  "src": "223:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 192,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 184,
+                  "name": "alerterAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 192,
+                  "src": "185:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Alerter_$176",
+                    "typeString": "contract Alerter"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 183,
+                    "name": "Alerter",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 176,
+                    "src": "185:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Alerter_$176",
+                      "typeString": "contract Alerter"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:21:1"
+            },
+            "returnParameters": {
+              "id": 186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:0:1"
+            },
+            "scope": 203,
+            "src": "173:79:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 201,
+              "nodeType": "Block",
+              "src": "314:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 197,
+                        "name": "alerter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 182,
+                        "src": "332:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Alerter_$176",
+                          "typeString": "contract Alerter"
+                        }
+                      },
+                      "id": 198,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "cfrInitialResponse",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 37,
+                      "src": "332:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                        "typeString": "function () external returns (uint256)"
+                      }
+                    },
+                    "id": 199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "332:28:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 196,
+                  "id": 200,
+                  "nodeType": "Return",
+                  "src": "325:35:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 202,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "provideInitialResponse",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 193,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:2:1"
+            },
+            "returnParameters": {
+              "id": 196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 195,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 202,
+                  "src": "309:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 194,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "309:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "308:6:1"
+            },
+            "scope": 203,
+            "src": "260:108:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 204,
+        "src": "128:243:1"
+      }
+    ],
+    "src": "37:334:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/CFR.sol",
+      "exportedSymbols": {
+        "CFR": [
+          203
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 178,
+        "name": "PragmaDirective",
+        "src": "37:25:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 179,
+        "name": "PragmaDirective",
+        "src": "64:33:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 177,
+          "absolutePath": "project:/contracts/Alerter.sol",
+          "file": "./Alerter.sol",
+          "scope": 204,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 180,
+        "name": "ImportDirective",
+        "src": "101:23:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            203
+          ],
+          "name": "CFR",
+          "scope": 204
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "alerter",
+              "scope": 203,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract Alerter",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Alerter",
+                  "referencedDeclaration": 176,
+                  "type": "contract Alerter"
+                },
+                "id": 181,
+                "name": "UserDefinedTypeName",
+                "src": "149:7:1"
+              }
+            ],
+            "id": 182,
+            "name": "VariableDeclaration",
+            "src": "149:15:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 203,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "alerterAddr",
+                      "scope": 192,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract Alerter",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Alerter",
+                          "referencedDeclaration": 176,
+                          "type": "contract Alerter"
+                        },
+                        "id": 183,
+                        "name": "UserDefinedTypeName",
+                        "src": "185:7:1"
+                      }
+                    ],
+                    "id": 184,
+                    "name": "VariableDeclaration",
+                    "src": "185:19:1"
+                  }
+                ],
+                "id": 185,
+                "name": "ParameterList",
+                "src": "184:21:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 186,
+                "name": "ParameterList",
+                "src": "212:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract Alerter"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 182,
+                              "type": "contract Alerter",
+                              "value": "alerter"
+                            },
+                            "id": 187,
+                            "name": "Identifier",
+                            "src": "223:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 184,
+                              "type": "contract Alerter",
+                              "value": "alerterAddr"
+                            },
+                            "id": 188,
+                            "name": "Identifier",
+                            "src": "233:11:1"
+                          }
+                        ],
+                        "id": 189,
+                        "name": "Assignment",
+                        "src": "223:21:1"
+                      }
+                    ],
+                    "id": 190,
+                    "name": "ExpressionStatement",
+                    "src": "223:21:1"
+                  }
+                ],
+                "id": 191,
+                "name": "Block",
+                "src": "212:40:1"
+              }
+            ],
+            "id": 192,
+            "name": "FunctionDefinition",
+            "src": "173:79:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "provideInitialResponse",
+              "scope": 203,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 193,
+                "name": "ParameterList",
+                "src": "291:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 202,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 194,
+                        "name": "ElementaryTypeName",
+                        "src": "309:4:1"
+                      }
+                    ],
+                    "id": 195,
+                    "name": "VariableDeclaration",
+                    "src": "309:4:1"
+                  }
+                ],
+                "id": 196,
+                "name": "ParameterList",
+                "src": "308:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 196
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "cfrInitialResponse",
+                              "referencedDeclaration": 37,
+                              "type": "function () external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 182,
+                                  "type": "contract Alerter",
+                                  "value": "alerter"
+                                },
+                                "id": 197,
+                                "name": "Identifier",
+                                "src": "332:7:1"
+                              }
+                            ],
+                            "id": 198,
+                            "name": "MemberAccess",
+                            "src": "332:26:1"
+                          }
+                        ],
+                        "id": 199,
+                        "name": "FunctionCall",
+                        "src": "332:28:1"
+                      }
+                    ],
+                    "id": 200,
+                    "name": "Return",
+                    "src": "325:35:1"
+                  }
+                ],
+                "id": 201,
+                "name": "Block",
+                "src": "314:54:1"
+              }
+            ],
+            "id": 202,
+            "name": "FunctionDefinition",
+            "src": "260:108:1"
+          }
+        ],
+        "id": 203,
+        "name": "ContractDefinition",
+        "src": "128:243:1"
+      }
+    ],
+    "id": 204,
+    "name": "SourceUnit",
+    "src": "37:334:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xFb8548Ca7aAeebC758351066371762570aD16Cd2",
+      "transactionHash": "0x3afe978d2b172abf8e92aba0bf638a90b1bcc0a689ce5fd79070ef27c7ce00f1"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-15T04:51:28.833Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

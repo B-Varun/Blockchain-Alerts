@@ -53,9 +53,9 @@ function App() {
       setAccount(accounts[0]);
 
       const alerterContractAddress =
-        "0xe6770dAd46Ce8526f734e1E90c77412e93F81195";
+        "0x00AcCEE9053077264bAd495d42Ea81384d724C16";
       const responderContractAddress =
-        "0x65028EDFBbDa204FA01ac1293dF1dFf03bD2937";
+        "0xc64D68456dD88D3DD0348b862e72528ae133c7f7";
       const alerterContract = new ethers.Contract(
         alerterContractAddress,
         contractABI,

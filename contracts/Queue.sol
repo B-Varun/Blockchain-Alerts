@@ -25,7 +25,7 @@ contract Queue{
 
 // Dequeue is invoked only by the Responder to close the alert,
 // Firstly, the alert at the 1st position of the openAlerts array is removed and added to the end of the closedAlerts. This ensures the FIFO order 
- function dequeue() public returns(uint){
+ function dequeue() public returns(Constants.Alert memory){
     // Check if there are any open alerts or not.
     require(openAlerts.length>0);
     // Holding the 1st alert to put into closed state.
@@ -50,7 +50,7 @@ contract Queue{
    //  return openAlerts.length;
 
 // Instead of returning the length of the alerts array just send the alert id of the alert that is deleted. 
-   return ((alert.alertId>0) ? alert.alertId : 0);
+   return alert;
  } 
 
  function list_All_OpenAlerts() public view returns(Constants.Alert[] memory){
